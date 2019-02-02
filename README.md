@@ -14,6 +14,9 @@
 ### Create core package
 ``` docker-compose run app sh -c "python manage.py startapp core" ```
 
+## Migrations
+### Make migrations
+    docker-compose run app sh -c "python manage.py makemigrations core"
 
 ------
 #### Notes to myself:
