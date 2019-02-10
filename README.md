@@ -18,6 +18,19 @@
 ### Make migrations
     docker-compose run app sh -c "python manage.py makemigrations core"
 
+## Run application
+###### Make sure to add allowed host (IP of docker-toolbox) to settings.py
+    docker-compose up
+    
+## Create super user (/admin)
+    docker-compose run app sh -c "python manage.py createsuperuser"
+
+
+## Create user module (for user endpoints)
+    docker-compose run --rm app sh -c "python manage.py startapp user"
+    
+
+
 ------
 #### Notes to myself:
 Projects other files than apps are brown in project because of project structure root setting... change it back to recipe-app-api...
