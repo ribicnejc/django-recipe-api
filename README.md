@@ -8,6 +8,10 @@
 
 ## Run Django tests
     docker-compose run app sh -c "python manage.py test"
+    
+## Run Django tests with flake8 and remove container
+    docker-compose run --rm app sh -c "python manage.py test && flake8"
+    
 ### My Run Django tests
     docker-compose run app sh -c "python app/manage.py test"
 
